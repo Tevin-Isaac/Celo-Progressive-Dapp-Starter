@@ -72,7 +72,7 @@ function a11yProps(index: number) {
     "aria-controls": `simple-tabpanel-${index}`,
   };
 }
-export default function Index() {
+function Index() {
   const router = useRouter();
   useEffect(() => {
     router.push('/extra-components/accordion');
@@ -80,3 +80,6 @@ export default function Index() {
     [];
   return <div />;
 }
+ 
+
+
