@@ -1,4 +1,6 @@
 import * as React from "react";
+import  { useEffect } from 'react';
+import { useRouter } from 'next/router';
 import { Tabs, Tab, Typography, Box, Link } from "@mui/material";
 import deployedContracts from "../../hardhat/deployments/hardhat_contracts.json";
 import { useContractKit } from "@celo-tools/use-contractkit";
@@ -69,4 +71,12 @@ function a11yProps(index: number) {
     id: `simple-tab-${index}`,
     "aria-controls": `simple-tabpanel-${index}`,
   };
+}
+export default function Index() {
+  const router = useRouter();
+  useEffect(() => {
+    router.push('/extra-components/accordion');
+  }),
+    [];
+  return <div />;
 }
